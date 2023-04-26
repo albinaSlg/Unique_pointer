@@ -1,0 +1,57 @@
+\hypertarget{unique_ptr_8h_source}{}\doxysection{unique\+Ptr.\+h}
+\label{unique_ptr_8h_source}\index{D:/visualStudio/UniquePtr/lib/uniquePtr/include/uniquePtr.h@{D:/visualStudio/UniquePtr/lib/uniquePtr/include/uniquePtr.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(T* ptr);}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_unique_ptr}{\string~UniquePtr}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\&\& other);}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& operator=(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{44     T\& operator*();}
+\DoxyCodeLine{51     T* operator-\/>() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{58     \textcolor{keyword}{explicit} \textcolor{keyword}{operator} bool() \textcolor{keyword}{const} \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{66     [[nodiscard]]T* release() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} reset(T* other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{87     T* get() \textcolor{keyword}{const} \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{keyword}{private}:}
+\DoxyCodeLine{90     T* ptr\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{91 \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{94 \textcolor{keyword}{class }\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}<T[]>}
+\DoxyCodeLine{95 \{}
+\DoxyCodeLine{96 \textcolor{keyword}{public}:}
+\DoxyCodeLine{103     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(T* ptr);}
+\DoxyCodeLine{110     \mbox{\hyperlink{class_unique_ptr}{\string~UniquePtr}}();}
+\DoxyCodeLine{111     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{112     \mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{UniquePtr<T[]>}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}<T[]>\& other) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{119     \mbox{\hyperlink{class_unique_ptr}{UniquePtr}}(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}<T[]>\&\& other);}
+\DoxyCodeLine{126     \mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{UniquePtr<T[]>}}\& operator=(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}<T[]>\&\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{134     T\& operator[](\textcolor{keyword}{const} \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{141     T\& operator*();}
+\DoxyCodeLine{148     T* operator-\/>() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{155     \textcolor{keyword}{explicit} \textcolor{keyword}{operator} bool() \textcolor{keyword}{const} \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{163     T* release() \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{170     \textcolor{keywordtype}{void} reset(T* other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{177     \textcolor{keywordtype}{void} swap(\mbox{\hyperlink{class_unique_ptr}{UniquePtr}}<T[]>\& other) \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{185     T* get() \textcolor{keyword}{const} \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{keyword}{private}:}
+\DoxyCodeLine{188     T* ptr\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{189 \};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#include "{}uniquePtr.inl"{}}}
+
+\end{DoxyCode}

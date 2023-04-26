@@ -1,0 +1,17 @@
+HTML_EXTRA_STYLESHEET = D:/visualStudio/UniquePtr/docs/customdoxygen.css
+HTML_HEADER = D:/visualStudio/UniquePtr/docs/header.html
+HTML_FOOTER = D:/visualStudio/UniquePtr/docs/footer.html
+DOXYFILE_ENCODING 	   = UTF-8
+PROJECT_NAME		   = "Unique pointer"
+FILE_PATTERNS   	   = *.h \
+						 *.hpp \
+						 *.hh \
+						 *.c \
+						 *.cc \
+						 *.cpp.in \
+						 *.cpp \
+						 *.md
+RECURSIVE              = YES
+PROJECT_BRIEF 		   = "Custom unique pointer"
+OUTPUT_DIRECTORY 	   = D:/visualStudio/UniquePtr/docs
+INPUT 				   = D:/visualStudio/UniquePtr/lib/uniquePtr

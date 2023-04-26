@@ -1,0 +1,182 @@
+\hypertarget{class_unique_ptr_3_01_t_0f_0e_4}{}\doxysection{Unique\+Ptr\texorpdfstring{$<$}{<} T\mbox{[}\mbox{]}\texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_unique_ptr_3_01_t_0f_0e_4}\index{UniquePtr$<$ T\mbox{[}\mbox{]}$>$@{UniquePtr$<$ T[]$>$}}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Constructor}\par
+{\em Constructs a \mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}} which owns ptr, initializing the stored pointer with ptr
+
+\begin{DoxyItemize}
+\item T$\ast$ pointer to the object \begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_af9e07d447dd2477302f59980c0c693c0}\label{class_unique_ptr_3_01_t_0f_0e_4_af9e07d447dd2477302f59980c0c693c0}} 
+{\bfseries Unique\+Ptr} (T $\ast$ptr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Destructor}\par
+{\em If ptr\+\_\+ == nullptr there are no effects. Otherwise, the owned object is destroyed
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a0139c1c0238210445d9cb7b0a06d15e9}\label{class_unique_ptr_3_01_t_0f_0e_4_a0139c1c0238210445d9cb7b0a06d15e9}} 
+{\bfseries $\sim$\+Unique\+Ptr} ()
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_aebdbe0eb51716a2a7f38fb53944bb63c}\label{class_unique_ptr_3_01_t_0f_0e_4_aebdbe0eb51716a2a7f38fb53944bb63c}} 
+{\bfseries Unique\+Ptr} (const \mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}} \&other)=delete
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a93afc2bc09aff548f1c2544c003976a2}\label{class_unique_ptr_3_01_t_0f_0e_4_a93afc2bc09aff548f1c2544c003976a2}} 
+\mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \& {\bfseries operator=} (const \mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&other)=delete
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Move constructor}\par
+{\em Constructs a unique\+\_\+ptr by transferring ownership from other to $\ast$this and stores the null pointer in other
+
+\begin{DoxyItemize}
+\item const \mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{Unique\+Ptr$<$\+T\mbox{[}$\,$\mbox{]}$>$}}\&\& another class instance \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{Unique\+Ptr$<$\+T\mbox{[}$\,$\mbox{]}$>$}}\& this class instance 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a8087b85ae4e480115304f6424120456e}\label{class_unique_ptr_3_01_t_0f_0e_4_a8087b85ae4e480115304f6424120456e}} 
+{\bfseries Unique\+Ptr} (\mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&\&other)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Move assignment operator}\par
+{\em Transfers ownership from other to $\ast$this
+
+\begin{DoxyItemize}
+\item const \mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{Unique\+Ptr$<$\+T\mbox{[}$\,$\mbox{]}$>$}}\&\& another class instance \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{Unique\+Ptr$<$\+T\mbox{[}$\,$\mbox{]}$>$}}\& this class instance 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a68ac53e6fbd79a3fcc914b46866c2878}\label{class_unique_ptr_3_01_t_0f_0e_4_a68ac53e6fbd79a3fcc914b46866c2878}} 
+\mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \& {\bfseries operator=} (\mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&\&other) noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ operator\mbox{[}\mbox{]}}\par
+{\em Returns a reference to the element managed by $\ast$this at specified location pos. No bounds checking is performed.
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+T\& object\textquotesingle{}s element reference 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_ab482c7bb9e213b8cd037b14967e9d113}\label{class_unique_ptr_3_01_t_0f_0e_4_ab482c7bb9e213b8cd037b14967e9d113}} 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const int index)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ operator$\ast$}\par
+{\em Provide access to the object owned by $\ast$this
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+T\& object reference, i.\+e. $\ast$get() 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a3029ee86e874363ea3e692e6797cac2a}\label{class_unique_ptr_3_01_t_0f_0e_4_a3029ee86e874363ea3e692e6797cac2a}} 
+T \& {\bfseries operator$\ast$} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ operator-\/\texorpdfstring{$>$}{>}}\par
+{\em Provide access to the object owned by $\ast$this
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+T$\ast$ pointer to the object owned by $\ast$this, i.\+e. get() 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_aa41bb68ea235fee72f0772b37422e5b9}\label{class_unique_ptr_3_01_t_0f_0e_4_aa41bb68ea235fee72f0772b37422e5b9}} 
+T $\ast$ {\bfseries operator-\/$>$} () noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ operator bool}\par
+{\em Checks whether $\ast$this owns an object, i.\+e. whether get() != nullptr
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+true if $\ast$this owns an object, false otherwise. 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a508484f5b3c3a55cbf607cca62768698}\label{class_unique_ptr_3_01_t_0f_0e_4_a508484f5b3c3a55cbf607cca62768698}} 
+{\bfseries operator bool} () const noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ release}\par
+{\em Return pointer and clean class field
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+T$\ast$ pointer to the released object 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_a63a401d99dec5a7ea8b90d74bf1bf4d0}\label{class_unique_ptr_3_01_t_0f_0e_4_a63a401d99dec5a7ea8b90d74bf1bf4d0}} 
+T $\ast$ {\bfseries release} () noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ resetD}\par
+{\em Replaces the managed object
+
+\begin{DoxyItemize}
+\item T$\ast$ pointer to the other object \begin{DoxyReturn}{Returns}
+None ~\newline
+ 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_abf368b7a79cd79b961f82df17dcabc96}\label{class_unique_ptr_3_01_t_0f_0e_4_abf368b7a79cd79b961f82df17dcabc96}} 
+void {\bfseries reset} (T $\ast$other) noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ swap}\par
+{\em Swaps the managed objects
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_unique_ptr_3_01_t_0f_0e_4}{Unique\+Ptr$<$\+T\mbox{[}$\,$\mbox{]}$>$}}\& other another class instance \begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\end{DoxyItemize}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_aff2cc34f79ed5fe2032ddb9e56550212}\label{class_unique_ptr_3_01_t_0f_0e_4_aff2cc34f79ed5fe2032ddb9e56550212}} 
+void {\bfseries swap} (\mbox{\hyperlink{class_unique_ptr}{Unique\+Ptr}}$<$ T\mbox{[}$\,$\mbox{]}$>$ \&other) noexcept
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{get}
+Returns a pointer to the managed object or nullptr if no object is owned.
+
+\begin{DoxyItemize}
+\item None \begin{DoxyReturn}{Returns}
+T$\ast$ pointer to the object 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_unique_ptr_3_01_t_0f_0e_4_ac869cd5f140fa910fecb0cc07caab716}\label{class_unique_ptr_3_01_t_0f_0e_4_ac869cd5f140fa910fecb0cc07caab716}} 
+T $\ast$ {\bfseries get} () const noexcept
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/visual\+Studio/\+Unique\+Ptr/lib/unique\+Ptr/include/unique\+Ptr.\+h\end{DoxyCompactItemize}
